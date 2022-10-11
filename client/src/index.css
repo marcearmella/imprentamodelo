@@ -1,16 +1,41 @@
+:root{
+  --azul: #003262;
+  --azul_t: #003362dd;
+  --azul_f: #244E76;
+  --celeste: #00B0DA;
+  --naranja: #FDB515;
+  --ocre: #DDD5C7;
+  --verde_claro: #B9D3B6;
+  --cian: #00b3e9;
+  --cian-oscuro: #313080;
+  --magenta: #ee3c89;
+  --magenta-oscuro: #250915;
+  --amarillo: #fbee1d;
+  --gris-fondo: #EFE9EF;
+  --negro: #282828;
+  --rojo-error: #db4242;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: geometr415;
+}
+
+@font-face{
+  font-family: geometr415;
+  src: url(fuentes/GEOMETR415-BLK-BT-BLACK.TTF);
+  font-style: normal;
+  font-weight: normal;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
+  min-height: 100vh;
+  background: #dedede;
 }
 
 code {
