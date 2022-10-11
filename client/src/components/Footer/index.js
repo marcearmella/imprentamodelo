@@ -1,10 +1,14 @@
+import CenterFooter from "./CenterFooter";
 import "./index.css";
-
+import LeftFooter from "./LeftFooter";
+import RightFooter from "./RightFooter";
 
 const Footer = () => {
   return (
-    <div>
-    <p>I'm the footer</p>
+    <div className="general-container">
+      <LeftFooter />
+      <CenterFooter />
+      <RightFooter />
     </div>
   );
 };
