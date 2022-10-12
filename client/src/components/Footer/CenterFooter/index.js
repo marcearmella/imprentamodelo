@@ -1,14 +1,14 @@
 import "./index.css";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const CenterFooter = () => {
   return (
-    <div className="container">
+    <div className="container-center">
       <h1 className="title">Productos y Servicios</h1>
-      <div className="Links-container">
-        <Link to="/">Inicio</Link>
-        <Link to="/services">Servicios</Link>
-        <Link to="/contact">Contacto</Link>
+      <div className="links-container">
+        <NavLink style={{textDecoration: 'none'}}  className={e => !e.isActive ? "link" : "link link-active"}  to="/" end>Inicio</NavLink>
+        <NavLink style={{textDecoration: 'none'}}  className={e => !e.isActive ? "link" : "link link-active"}  to="/services">Servicios</NavLink>
+        <NavLink style={{textDecoration: 'none'}}  className={e => !e.isActive ? "link" : "link link-active"}  to="/contact">Contacto</NavLink>
       </div>
     </div>
   );
