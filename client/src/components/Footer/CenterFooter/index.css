@@ -1,0 +1,34 @@
+.container-center{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.links-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 80%;
+}
+
+.link{
+    color: #fff;
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    transition: .3s linear;
+}
+
+.link-active{
+    color: var(--naranja);
+}
+
+.link:visited{
+    color: #fff;
+}
+
+.link:hover{
+    color: var(--naranja);
+}

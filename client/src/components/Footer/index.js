@@ -1,6 +1,6 @@
-import CenterFooter from "./CenterFooter";
 import "./index.css";
 import LeftFooter from "./LeftFooter";
+import CenterFooter from "./CenterFooter";
 import RightFooter from "./RightFooter";
 
 const Footer = () => {
