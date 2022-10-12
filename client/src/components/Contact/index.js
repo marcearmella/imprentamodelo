@@ -1,11 +1,13 @@
-import './index.css';
+import Form from "./Form";
+import "./index.css";
 
 const Contact = () => {
-    return(
-        <div>
-            <h1>Hello I'm Contact</h1>
-        </div>
-    );
-}
+  return (
+    <div className="contact-container">
+      <h1>Contactanos</h1>
+      <Form />
+    </div>
+  );
+};
 
 export default Contact;
