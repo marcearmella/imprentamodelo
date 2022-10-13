@@ -1,29 +1,30 @@
-:root{
+:root {
   --azul: #003262;
   --azul_t: #003362dd;
-  --azul_f: #244E76;
-  --celeste: #00B0DA;
-  --naranja: #FDB515;
-  --ocre: #DDD5C7;
-  --verde_claro: #B9D3B6;
+  --azul_f: #244e76;
+  --celeste: #00b0da;
+  --naranja: #fdb515;
+  --ocre: #ddd5c7;
+  --verde_claro: #b9d3b6;
   --cian: #00b3e9;
   --cian-oscuro: #313080;
   --magenta: #ee3c89;
   --magenta-oscuro: #250915;
   --amarillo: #fbee1d;
-  --gris-fondo: #EFE9EF;
+  --gris-fondo: #efe9ef;
   --negro: #282828;
   --rojo-error: #db4242;
+  --azul_c: #7085a7ac;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: geometr415;
 }
 
-@font-face{
+@font-face {
   font-family: geometr415;
   src: url(fuentes/GEOMETR415-BLK-BT-BLACK.TTF);
   font-style: normal;
@@ -39,6 +40,6 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

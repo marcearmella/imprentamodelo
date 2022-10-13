@@ -1,0 +1,95 @@
+.container {
+  width: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.data li {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.data li input {
+  width: 100%;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background-color: var(--gris-fondo);
+  border: 1px solid var(--cian-oscuro);
+}
+
+.data li input::placeholder,
+textarea::placeholder {
+  color: var(--azul_c);
+}
+
+.data li textarea {
+  border: 1px solid var(--cian-oscuro);
+  min-width: 100%;
+  max-width: 100%;
+  background-color: var(--gris-fondo);
+  min-height: 200px;
+  max-height: 350px;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.flatButton {
+  display: inline;
+  height: 40px;
+  width: 110px;
+  margin: 2px 0px 0px 1px;
+  overflow: hidden;
+  float: left;
+  text-align: center;
+  transition: all 0.8s ease, box-shadow 2s;
+  -webkit-transition: all 0.8s ease, box-shadow 2s;
+  cursor: pointer;
+  background-color: var(--magenta);
+  border: 1px solid var(--cian-oscuro);
+  border-radius: 6px;
+  color: white;
+  font-size: large;
+  padding: 8px 20px;
+}
+
+.send {
+  position: relative;
+  overflow: hidden;
+}
+
+.icon {
+  pointer-events: none;
+  position: absolute;
+  padding-left: 100px;
+  top: -3px;
+  left: 27%;
+  color: white;
+  height: 50px;
+  width: 50px;
+  line-height: 150px;
+  font-size: 25px;
+  transition: margin 0.8s, padding 1.5s;
+  -webkit-transition: margin 0.8s, padding 1.5s;
+  -webkit-backface-visibility: visible;
+  -webkit-transform-origin: 50% 50%;
+  -webkit-transform: perspective(500px) rotateY(-40deg) scaleY(0.9) scaleX(1.15);
+}
+
+.send:hover > .icon {
+  margin-bottom: -150px;
+  padding-left: 0;
+}
+
+.send:hover > .flatButton {
+  color: transparent;
+}
