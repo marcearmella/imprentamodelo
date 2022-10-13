@@ -1,7 +1,10 @@
 import {useRef} from "react";
 import emailjs from "@emailjs/browser";
 import {ToastContainer, toast} from "react-toastify";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import "react-toastify/dist/ReactToastify.css";
+import styles from "./Form.module.css";
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 
 const Form = () => {
   const refForm = useRef();
@@ -51,45 +54,42 @@ const Form = () => {
   };
 
   return (
-    <div className="form-container">
-      <div className="contact-form">
-        <form ref={refForm} onSubmit={sendEmail}>
-          <ToastContainer
-            position="top-center"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
+    <form className={styles.container} ref={refForm} onSubmit={sendEmail}>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
 
-          <ul className="form-ul">
-            <li>
-              <input placeholder="Nombre" type="text" name="name" required />
-            </li>
-            <li>
-              <input placeholder="Email" type="email" name="email" required />
-            </li>
-            <li>
-              <input placeholder="Asunto" type="text" name="subject" required />
-            </li>
-            <li>
-              <textarea
-                placeholder="Deja tu mensaje"
-                name="message"
-                required
-              ></textarea>
-            </li>
-            <li>
-              <input type="submit" className="flat-button" value="Enviar" />
-            </li>
-          </ul>
-        </form>
+      <ul className={styles.data}>
+        <li>
+          <input placeholder="Nombre" type="text" name="name" required />
+        </li>
+        <li>
+          <input placeholder="Email" type="email" name="email" required />
+        </li>
+        <li>
+          <input placeholder="Asunto" type="text" name="subject" required />
+        </li>
+        <li>
+          <textarea
+            placeholder="Deja tu mensaje"
+            name="message"
+            required
+          ></textarea>
+        </li>
+      </ul>
+      <div className={styles.send}>
+        <input type="submit" className={styles.flatButton} value="Enviar" />
+        <FontAwesomeIcon size="1x" className={styles.icon} icon={faEnvelope} />
       </div>
-    </div>
+    </form>
   );
 };
 
