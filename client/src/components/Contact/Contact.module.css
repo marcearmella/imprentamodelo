@@ -3,7 +3,6 @@
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  height: 600px;
 }
 
 .data {
@@ -21,9 +20,24 @@
   align-items: center;
   width: 50%;
   border-left: 2px solid var(--cian-oscuro);
+  margin-bottom: 10px;
 }
 
-h2 {
+.container div h2 {
   margin-bottom: 40px;
   color: var(--azul_t);
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .form {
+    border-left: none;
+    border-top: 2px solid var(--cian-oscuro);
+    padding-top: 20px;
+    width: 80%;
+    margin-bottom: 10px;
+  }
 }
