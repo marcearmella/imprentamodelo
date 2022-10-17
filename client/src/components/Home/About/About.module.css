@@ -1,0 +1,61 @@
+.container{
+    width: 90%;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .title{
+    background: var(--celeste);
+    width: 100%;
+    padding: 10px 0;
+    margin: 50px 0;
+    color: #fff;
+}
+
+.container .title h1{
+    font-size: 2em;
+    text-align: center;
+}
+
+.boxes{
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+}
+
+.videoContainer{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.videoContainer video{
+    width: 100%;
+}
+
+.infoContainer{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.infoContainer .text{
+    text-align: start;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.infoContainer .text p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+.infoContainer img{
+    width: 35%;
+}
