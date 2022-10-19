@@ -57,3 +57,13 @@
 .container .sponsors .sponsor:hover{
     transform: scale(1.2);
 }
+
+@media screen and (max-width: 768px){
+    .sponsorsCont::after{
+        background: none;
+    }
+
+    .sponsorsCont::before{
+        background: none;
+    }
+}

@@ -58,4 +58,26 @@
 
 .infoContainer img{
     width: 35%;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1150px) {
+    .boxes{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .videoContainer{
+        width: 90%;
+    }
+
+    .infoContainer{
+        width: 90%;
+        margin-top: 15px;
+    }
+
+    .infoContainer img{
+        margin-top: 15px;
+    }
 }

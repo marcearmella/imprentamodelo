@@ -30,13 +30,15 @@ const RightFooter = () => {
             size="2x"
             className={`${styles.icon} ${styles.iconIg}`}
           />
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.instagram.com/imprentamodelotuc/"
-          >
-            /imprentamodelotuc
-          </a>
+          <p>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.instagram.com/imprentamodelotuc/"
+            >
+              /imprentamodelotuc
+            </a>
+          </p>
         </li>
         <li>
           <FontAwesomeIcon
@@ -44,13 +46,15 @@ const RightFooter = () => {
             size="2x"
             className={`${styles.icon} ${styles.iconIg}`}
           />
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.instagram.com/neotech.tuc/"
-          >
-            /neotech.tuc
-          </a>
+          <p>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.instagram.com/neotech.tuc/"
+            >
+              /neotech.tuc
+            </a>
+          </p>
         </li>
         <li>
           <FontAwesomeIcon

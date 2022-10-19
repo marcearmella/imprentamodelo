@@ -1,11 +1,24 @@
 .container{
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
   background: var(--azul_t);
   color: #fff;
   width: 100%;
   height: 350px;
-  padding-top: 20px;
+  padding: 20px 0;
 }
 
+@media screen and (max-width: 1150px){
+  .container{
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .container{
+    flex-direction: column;
+    align-items: center;
+  }
+}

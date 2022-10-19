@@ -16,11 +16,10 @@ import {useRef, useEffect} from 'react';
 const Sponsors = () => {
     let key = 0;
     const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12];
-
     const sponsors = useRef(null);
 
-    const next = async () => {
-        const first = await sponsors.current.children[0];
+    const next = () => {
+        const first = sponsors.current.children[0];
         const scale = first.offsetWidth;
         sponsors.current.style.transition = `1000ms linear`;
         sponsors.current.style.transform = `translateX(-${scale + 40}px)`;
@@ -34,19 +33,29 @@ const Sponsors = () => {
     }
 
     useEffect(()=>{
-        let interval = setInterval(()=>{
-            next();
-        },4000);
-        sponsors.current.addEventListener('mouseenter', () => {
-            clearInterval(interval);
-        });
-        sponsors.current.addEventListener('mouseleave', () => {
-            interval = setInterval(() => {
-              next();
+        let interval = null;
+        function startInterval(){
+            interval = setInterval(()=>{
+                sponsors.current && next();
             },4000);
-        })
+        }
+        function stopInterval(){
+            clearInterval(interval);
+        }
 
-        return () => clearInterval(interval);
+        startInterval();
+
+        sponsors.current.addEventListener('mouseenter', () => {
+            stopInterval();
+        });
+
+        sponsors.current.addEventListener('mouseleave', () => {
+            startInterval();
+        });
+
+        return () => {
+            stopInterval();
+        }
     },[]);
 
     return(
