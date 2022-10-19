@@ -1,11 +1,11 @@
-import "./index.css";
-import LeftFooter from "./LeftFooter";
-import CenterFooter from "./CenterFooter";
-import RightFooter from "./RightFooter";
+import styles from "./Footer.module.css";
+import LeftFooter from "./Left";
+import CenterFooter from "./Center";
+import RightFooter from "./Right";
 
 const Footer = () => {
   return (
-    <div className="general-container">
+    <div className={styles.container}>
       <LeftFooter />
       <CenterFooter />
       <RightFooter />

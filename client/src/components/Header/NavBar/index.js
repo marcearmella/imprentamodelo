@@ -1,4 +1,4 @@
-import "./index.css";
+import styles from "./NavBar.module.css";
 import React, { useState, useEffect } from "react";
 import {NavLink} from "react-router-dom";
 
@@ -17,19 +17,19 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className="nav-container" style={{
+    <div className={styles.container} style={{
       backgroundColor: navColor,
       height: navSize,
       transition: "all 1s"
     }}>
-      <div className="logo">
+      <div className={styles.logo}>
         <h2>ARTES GRÁFICAS</h2>
         <h1>MODELO</h1>
       </div>
-      <div className="link-container">
-        <NavLink className={e => !e.isActive ? "navLink" : "navLink-active"} to="/" end>Inicio</NavLink>
-        <NavLink className={e => !e.isActive ? "navLink" : "navLink-active"} to="/services">Servicios</NavLink>
-        <NavLink className={e => !e.isActive ? "navLink" : "navLink-active"} to="/contact">Contacto</NavLink>
+      <div className={styles.links}>
+        <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/" end>Inicio</NavLink>
+        <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/services">Servicios</NavLink>
+        <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/contact">Contacto</NavLink>
       </div>
     </div>
   );

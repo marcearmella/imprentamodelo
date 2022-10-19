@@ -1,15 +1,14 @@
-import './index.css';
+import styles from './Home.module.css';
+import About from './About';
+import Features from './Features';
+import Sponsors from './Sponsors';
 
 const Home = () => {
     return(
-        <div>
-            <h1>Hello World!</h1>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <div className={styles.container}>
+            <About />
+            <Features />
+            <Sponsors />
         </div>
     );
 }
