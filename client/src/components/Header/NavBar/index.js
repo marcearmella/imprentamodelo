@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import {NavLink} from "react-router-dom";
 
 const NavBar = () => {
+  const [menu, setMenu] = useState('inactive');
   const [navSize, setnavSize] = useState("10rem");
   const [navColor, setnavColor] = useState("transparent");
   const listenScrollEvent = () => {
@@ -10,11 +11,20 @@ const NavBar = () => {
     window.scrollY > 10 ? setnavSize("6rem") : setnavSize("10rem");
   };
   useEffect(() => {
+    //responsiveMenu();
     window.addEventListener("scroll", listenScrollEvent);
     return () => {
       window.removeEventListener("scroll", listenScrollEvent);
     };
   }, []);
+
+  const handlerMenu = () => {
+    if(menu === 'inactive'){
+      setMenu('active');
+    }else if(menu === 'active'){
+      setMenu('inactive');
+    }
+  };
 
   return (
     <div className={styles.container} style={{
@@ -26,7 +36,10 @@ const NavBar = () => {
         <h2>ARTES GRÁFICAS</h2>
         <h1>MODELO</h1>
       </div>
-      <div className={styles.links}>
+      <div className={`${styles.burger} ${menu === 'active' ? styles.active : styles.inactive}`} onClick={() => handlerMenu()}>
+        <span className={styles.bar}></span>
+      </div>
+      <div className={`${styles.links} ${menu==='active' ? styles.openMenu : styles.closeMenu}`}>
         <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/" end>Inicio</NavLink>
         <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/services">Servicios</NavLink>
         <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/contact">Contacto</NavLink>
