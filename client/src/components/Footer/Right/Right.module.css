@@ -70,7 +70,6 @@
   }
 
   .title{
-    font-size: 1.2em;
     width: 150px;
   }
 
@@ -96,8 +95,10 @@
   }
 
   .title{
-    font-size: 1.4em;
-    width: 200px;
+    width: 100%;
+    padding-top: 10px;
+    justify-content: start;
+    padding-bottom: 10px;
   }
 
   .contacts{

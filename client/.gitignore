@@ -12,6 +12,8 @@ package-lock.json
 
 # production
 /build
+/src/videos
+/src/images
 
 # misc
 .DS_Store

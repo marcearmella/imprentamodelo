@@ -20,6 +20,7 @@ const Features = () => {
                         <p>32 años nos respaldan</p>
                     </div>
                 </div>
+
                 <div className={styles.feature}>
                     <img src={variedad} alt={"característica del negocio"} />
                     <div className={styles.text}>
@@ -31,7 +32,7 @@ const Features = () => {
                     <img src={precio} alt={"característica del negocio"} />
                     <div className={styles.text}>
                         <h2>Precio/calidad</h2>
-                        <p>Buscamos ofrecer la mejor calidad de impresión a un precio justo</p>
+                        <p>Ofrecemos la mejor calidad de impresión a un precio justo</p>
                     </div>
                 </div>
                 <div className={styles.feature}>
@@ -44,7 +45,7 @@ const Features = () => {
                 <div className={styles.feature}>
                     <img src={seriedad} alt={"característica del negocio"} />
                     <div className={styles.text}>
-                        <h2>Seriedad y honestidad</h2>
+                        <h2>Seriedad/honestidad</h2>
                         <p>es nuestro compromiso</p>
                     </div>
                 </div>

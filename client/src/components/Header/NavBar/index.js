@@ -1,6 +1,6 @@
 import styles from "./NavBar.module.css";
 import React, { useState, useEffect } from "react";
-import {NavLink} from "react-router-dom";
+import {NavLink, Link} from "react-router-dom";
 
 const NavBar = () => {
   const [menu, setMenu] = useState('inactive');
@@ -32,17 +32,19 @@ const NavBar = () => {
       height: navSize,
       transition: "all 1s"
     }}>
-      <div className={styles.logo}>
-        <h2>ARTES GRÁFICAS</h2>
-        <h1>MODELO</h1>
-      </div>
+      <Link style={{textDecoration: 'none', color: '#fff'}} to="/">
+        <div className={styles.logo} onClick={() => setMenu('inactive')}>
+          <h2>ARTES GRÁFICAS</h2>
+          <h1>MODELO</h1>
+        </div>
+      </Link>
       <div className={`${styles.burger} ${menu === 'active' ? styles.active : styles.inactive}`} onClick={() => handlerMenu()}>
         <span className={styles.bar}></span>
       </div>
       <div className={`${styles.links} ${menu==='active' ? styles.openMenu : styles.closeMenu}`}>
-        <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/" end>Inicio</NavLink>
-        <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/services">Servicios</NavLink>
-        <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/contact">Contacto</NavLink>
+        <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/" end><p onClick={() => setMenu('inactive')}>Inicio</p></NavLink>
+        <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/services"><p onClick={() => setMenu('inactive')}>Servicios</p></NavLink>
+        <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/contact"><p onClick={() => setMenu('inactive')}>Contacto</p></NavLink>
       </div>
     </div>
   );

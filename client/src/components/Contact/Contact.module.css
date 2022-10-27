@@ -3,7 +3,6 @@
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  padding: 40px;
 }
 
 .data {
@@ -25,20 +24,25 @@
 }
 
 .container div h2 {
-  margin-bottom: 40px;
+  margin: 40px 0;
   color: var(--azul_t);
 }
 
 @media screen and (max-width: 1024px) {
   .container {
     flex-direction: column;
+    
+  }
+
+  .data{
+    width: 100%;
   }
 
   .form {
     border-left: none;
     border-top: 2px solid var(--cian-oscuro);
     padding-top: 20px;
-    width: 80%;
-    margin-bottom: 10px;
+    width: 100%;
+    margin-bottom: 30px;
   }
 }
