@@ -65,7 +65,10 @@
         min-width: 90%;
         justify-content: center;
         min-height: max-content;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+    }
+    .text p{
+        text-align: justify;
     }
 
 }

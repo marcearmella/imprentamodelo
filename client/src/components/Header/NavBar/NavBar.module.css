@@ -16,22 +16,23 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
-.logo h3{
-  font-size: 1.5em;
+.logo h1{
+  font-size: 1.4em;
   text-align: center;
 }
 
-.logo h4{
-  font-size: 3.8em;
-  line-height: 40px;
+.logo h2{
+  font-size: 1.4em;
+  line-height: 20px;
 }
 
 .navLink:link {
   color: #fff;
   text-decoration: none;
-  font-size: 2.1em;
+  /* font-size: 2.1em; */
   margin-right: 20px;
 }
 
@@ -46,7 +47,7 @@
 .navLinkActive{
   color: #fff;
   text-decoration: none;
-  font-size: 2.1em;
+  /* font-size: 2.1em; */
   margin-right: 20px;
   color: var(--naranja);
 }
@@ -55,6 +56,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.6em;
 }
 
 .burger{
@@ -129,7 +131,9 @@
     top: 80px;
     background: var(--azul_t);
     flex-direction: column;
-    width: 400px;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 350px;
     padding: 40px 0;
     border-top: 1px solid var(--azul_f);
     transition: .3s linear;
@@ -140,18 +144,18 @@
   }
 
   .closeMenu{
-    right: -400px;
+    right: -100%;
   }
 
   .navLink:link{
-    width: 150px;
+    width: 60%;
     margin: 0;
     margin-bottom: 30px;
     border-bottom: 1px solid #fff;
   }
 
   .navLinkActive{
-    width: 150px;
+    width: 60%;
     margin: 0;
     margin-bottom: 30px;
     border-bottom: 1px solid #fff;  
@@ -167,5 +171,19 @@
 
   .burger{
     display: flex;
+  }
+
+  .logo{
+    margin-left: 8px;
+  }
+  
+  .logo h3{
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  .logo h4{
+    font-size: 3.8em;
+    line-height: 40px;
   }
 }

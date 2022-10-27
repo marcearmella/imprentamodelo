@@ -4,7 +4,7 @@
   gap: 15px;
   align-items: center;
   justify-content: center;
-  max-width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -87,4 +87,14 @@
   max-height: 100%;
   pointer-events: none;
   user-select: none;
+}
+
+@media screen and (max-width: 767px) {
+  .container{
+    max-width: 100%;
+  }
+  .container .single{
+    width: 45%;
+    margin-right: 6px;
+  }
 }

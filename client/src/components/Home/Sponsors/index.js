@@ -21,8 +21,9 @@ const Sponsors = () => {
     const next = () => {
         const first = sponsors.current.children[0];
         const scale = first.offsetWidth;
-        sponsors.current.style.transition = `1000ms linear`;
-        sponsors.current.style.transform = `translateX(-${scale + 40}px)`;
+        sponsors.current.style.transition = `600ms ease-in-out`;
+        let windowScale = window.innerWidth > 768 ? 40 : 20;
+        sponsors.current.style.transform = `translateX(-${scale + windowScale}px)`;
         const transition = () => {
             sponsors.current.style.transition = 'none';
             sponsors.current.style.transform = `translateX(0)`;
@@ -34,21 +35,19 @@ const Sponsors = () => {
 
     useEffect(()=>{
         let interval = null;
+        
         function startInterval(){
             interval = setInterval(()=>{
                 sponsors.current && next();
-            },4000);
+            },1500);
         }
         function stopInterval(){
             clearInterval(interval);
         }
-
         startInterval();
-
         sponsors.current.addEventListener('mouseenter', () => {
             stopInterval();
         });
-
         sponsors.current.addEventListener('mouseleave', () => {
             startInterval();
         });

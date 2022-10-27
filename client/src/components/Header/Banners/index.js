@@ -19,7 +19,7 @@ const Banners = () => {
       slidesContainer.current.style.transition = 'none';
       slidesContainer.current.style.transform = `translateX(-${scale}px)`;
       setTimeout(() => {
-        slidesContainer.current.style.transition = `2000ms ease-out all`;
+        slidesContainer.current.style.transition = `1500ms ease-in-out all`;
         slidesContainer.current.style.transform = `translateX(0)`;
       },30)
     }
@@ -28,7 +28,7 @@ const Banners = () => {
   const next = () => {
     if(slidesContainer.current.children.length > 0){
       const firstImg = slidesContainer.current.children[0];
-      slidesContainer.current.style.transition = `2000ms ease-out all`;
+      slidesContainer.current.style.transition = `1500ms ease-in-out all`;
       const scale = firstImg.offsetWidth;
       slidesContainer.current.style.transform = `translateX(-${scale}px)`;
 
@@ -45,16 +45,15 @@ const Banners = () => {
   useEffect(() => {
     let interval = setInterval(() => {
       next();
-    },5000);
+    },6000);
     slidesContainer.current.addEventListener('mouseenter', () => {
       clearInterval(interval);
     });
     slidesContainer.current.addEventListener('mouseleave', () => {
       interval = setInterval(() => {
         next();
-      },5000);
+      },6000);
     })
-    
   },[]);
   
   return (

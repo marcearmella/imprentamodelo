@@ -28,3 +28,12 @@
   color: var(--cian-oscuro);
   margin-right: 15px;
 }
+
+@media screen and (max-width: 767px){
+  .container{
+    width: 90%;
+  }
+  .info{
+    width: 100%;
+  }
+}
