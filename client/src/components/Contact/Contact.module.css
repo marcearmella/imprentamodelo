@@ -3,24 +3,26 @@
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  padding: 95px 0;
 }
 
 .data {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   width: 50%;
+  min-height: 500px;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   width: 50%;
   border-left: 2px solid var(--cian-oscuro);
-  margin-bottom: 10px;
+  min-height: 500px;
 }
 
 .container div h2 {

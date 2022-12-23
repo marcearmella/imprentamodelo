@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px;
+    width: auto;
     margin: 0 auto;
     margin-bottom: 20px;
     border-bottom: 2px solid #fff;

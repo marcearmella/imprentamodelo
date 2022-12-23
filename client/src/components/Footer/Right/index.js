@@ -14,7 +14,7 @@ const RightFooter = () => {
             size="2x"
             className={`${styles.icon} ${styles.iconWp}`}
           />
-          <p>3815057391 Ventas Offset</p>
+          <p>Ventas Offset: <a href="https://api.whatsapp.com/send?phone=543815057391" target="_blank" rel="noopener noreferrer">3815057391</a></p>
         </li>
         <li>
           <FontAwesomeIcon
@@ -22,14 +22,20 @@ const RightFooter = () => {
             size="2x"
             className={`${styles.icon} ${styles.iconWp}`}
           />
-          <p>3815114217 / 3813273910 Ventas Digital</p>
+          <p>Ventas Digital: <a href="https://api.whatsapp.com/send?phone=543815114217" target="_blank" rel="noopener noreferrer">3815114217</a> / <a href="https://api.whatsapp.com/send?phone=543813273910" target="_blank" rel="noopener noreferrer">3813273910</a></p>
         </li>
         <li>
-          <FontAwesomeIcon
-            icon={faInstagram}
-            size="2x"
-            className={`${styles.icon} ${styles.iconIg}`}
-          />
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.instagram.com/imprentamodelotuc/"
+          >
+            <FontAwesomeIcon
+              icon={faInstagram}
+              size="2x"
+              className={`${styles.icon} ${styles.iconIg}`}
+            />
+          </a>
           <p>
             <a
               target="_blank"
@@ -41,11 +47,17 @@ const RightFooter = () => {
           </p>
         </li>
         <li>
-          <FontAwesomeIcon
-            icon={faInstagram}
-            size="2x"
-            className={`${styles.icon} ${styles.iconIg}`}
-          />
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.instagram.com/neotech.tuc/"
+          >
+            <FontAwesomeIcon
+              icon={faInstagram}
+              size="2x"
+              className={`${styles.icon} ${styles.iconIg}`}
+            />
+          </a>
           <p>
             <a
               target="_blank"
