@@ -70,6 +70,7 @@ const Cards = ({gallery}) => {
                 onClick={() => handleOpenModal(index)}
               >
                 <img src={slide.img} alt="slide" />
+                {slide.text && <p className={styles.text}>{slide.text}</p>}
               </div>
             );
           })}

@@ -1,6 +1,7 @@
 import styles from "./NavBar.module.css";
 import React, { useState, useEffect } from "react";
 import {NavLink, Link} from "react-router-dom";
+// import logo from '../../../images/logos/logo-blanco.png';
 
 const NavBar = () => {
   const [menu, setMenu] = useState('inactive');
@@ -36,6 +37,7 @@ const NavBar = () => {
         <div className={styles.logo} onClick={() => setMenu('inactive')}>
           <h2>ARTES GRÁFICAS</h2>
           <h1>MODELO</h1>
+          {/* <img style={{width: '100px'}} src={logo} alt="descripcion de la imagen" /> */}
         </div>
       </Link>
       <div className={`${styles.burger} ${menu === 'active' ? styles.active : styles.inactive}`} onClick={() => handlerMenu()}>

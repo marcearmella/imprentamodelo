@@ -1,5 +1,5 @@
 import styles from "./Left.module.css";
-import logo from "../../../images/logoblanco.png";
+import logo from "../../../images/logos/logo-blanco.png";
 
 const LeftFooter = () => {
   return (

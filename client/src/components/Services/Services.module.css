@@ -1,30 +1,27 @@
 .container {
-  padding-top: 80px;
-  margin-top: 30px;
-  margin-bottom: 60px;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 160vh;
 }
 
 .container h2 {
-  margin: 0;
+  margin: 200px 0 100px;
   color: var(--cian-oscuro);
-  margin-bottom: 80px;
   font-size: 2.4em;
 }
 
 @media screen and (max-width: 767px){
   .container{
-    margin-bottom: 30px;
-    padding-top: 40px;
+    margin-bottom: 0;
+    padding-top: 0;
   }
   
   .container h2{
     font-size: 1.4em;
     margin: 0;
-    margin-bottom: 40px;
   }
 }
