@@ -9,12 +9,18 @@
   height: 350px;
   padding: 20px 0;
   padding-top: 40px;
-  margin-top: 200px;
+  margin-top: var(--w-margin);
 }
 
 @media screen and (max-width: 1150px){
   .container{
     height: auto;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .container{
+      margin-top: calc(var(--w-margin) - 40px);
   }
 }
 

@@ -17,6 +17,7 @@
   --negro: #282828;
   --rojo-error: #db4242;
   --azul_c: #7085a7ac;
+  --w-margin: 100px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap');

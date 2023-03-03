@@ -18,7 +18,7 @@ const About = () => {
             </div>
             <div className={styles.boxes}>
                 <div className={styles.videoContainer} >
-                    <video ref={vid} src={video} controls={true} />
+                    <video ref={vid} src={video} controls={true} controlsList="nodownload" />
                 </div>
                 <div className={styles.infoContainer}>
                     <div className={styles.text}>
