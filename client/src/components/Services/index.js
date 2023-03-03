@@ -17,23 +17,31 @@ const Services = ({setFlag}) => {
   const gallery = [
     {
       img: img1,
+      text: "Folletos"
     },{
       img: img2,
+      text: "Calcomanías"
     },{
       img: img3,
-      text: "Serigrafía"
+      text: "Sublimación en tazas"
     },{
       img: img4,
+      text: "Banners"
     },{
       img: img5,
+      text: "Sublimación en tela"
     },{
       img: img6,
+      text: "Tarjetas personales"
     },{
       img: img7,
+      text: "Carteleras Escolares"
     },{
       img: img8,
+      text: "Almanaques"
     },{
       img: img9,
+      text: "Pines"
     }
   ];
 
@@ -45,7 +53,9 @@ const Services = ({setFlag}) => {
 
   return (
     <div className={styles.container} ref={servicesRef}>
-      <h2>Conoce Nuestros Servicios</h2>
+      <div className={styles.title}>
+        <h1>Conoce nuestros servicios</h1>
+      </div>
       <Cards gallery={gallery} />
     </div>
   );
