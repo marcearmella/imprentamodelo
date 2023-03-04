@@ -57,6 +57,12 @@
     transform: scale(1.2);
 }
 
+@media screen and (max-width: 1278px){
+    .container .title{
+        margin: calc(var(--w-margin) - 50px) 0;
+    }
+}
+
 @media screen and (max-width: 1023px) {
     .container .title{
         margin: calc(var(--w-margin) - 60px) 0;

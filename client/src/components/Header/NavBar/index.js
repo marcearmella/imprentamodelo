@@ -1,5 +1,5 @@
 import styles from "./NavBar.module.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {NavLink, Link} from "react-router-dom";
 // import logo from '../../../images/logos/logo-blanco.png';
 
@@ -7,12 +7,22 @@ const NavBar = () => {
   const [menu, setMenu] = useState('inactive');
   const [navSize, setnavSize] = useState("10rem");
   const [navColor, setnavColor] = useState("transparent");
+  const screenSize = useRef(window.innerWidth);
   const listenScrollEvent = () => {
     window.scrollY > 10 ? setnavColor("#003362dd") : setnavColor("transparent");
-    window.scrollY > 10 ? setnavSize("6rem") : setnavSize("10rem");
+    
+    if (screenSize.current > 1278) {
+      window.scrollY > 10 ? setnavSize("6rem") : setnavSize("10rem");
+    }else{
+      window.scrollY > 10 ? setnavSize("3rem") : setnavSize("5rem");
+    }
+
   };
   useEffect(() => {
     //responsiveMenu();
+    window.addEventListener('resize', () => {
+      screenSize.current = window.innerWidth;
+    });
     window.addEventListener("scroll", listenScrollEvent);
     return () => {
       window.removeEventListener("scroll", listenScrollEvent);

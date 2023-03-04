@@ -12,6 +12,12 @@
   margin-top: var(--w-margin);
 }
 
+@media screen and (max-width: 1278px){
+  .container{
+      margin-top: calc(var(--w-margin) - 50px);
+  }
+}
+
 @media screen and (max-width: 1150px){
   .container{
     height: auto;
