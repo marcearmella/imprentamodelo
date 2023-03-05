@@ -13,8 +13,9 @@
 }
 
 .container .title h1{
-    font-size: 2em;
+    font-size: 1.8em;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .boxes{
@@ -73,8 +74,11 @@
     .container .title{
         margin: calc(var(--w-margin) - 50px) 0;
     }
+    .container .title h1{
+        font-size: 1.3em;
+    }
     .infoContainer .text p{
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
     .container .boxes .infoContainer img{
         width: 35%;

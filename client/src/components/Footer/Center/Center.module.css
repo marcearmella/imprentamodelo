@@ -48,6 +48,21 @@
     color: var(--naranja);
 }
 
+@media screen and (max-width: 1278px){
+    .title{
+        font-size: 1.2em;
+        margin-bottom: 40px;
+    }
+    .link{
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+    .linkActive{
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+}
+
 @media screen and (max-width: 1150px){
     .container{
         width: 200px;

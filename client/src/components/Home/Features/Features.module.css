@@ -13,8 +13,9 @@
 }
 
 .container .title h1{
-    font-size: 2em;
+    font-size: 1.8em;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .features{
@@ -64,6 +65,9 @@
 @media screen and (max-width: 1278px){
     .container .title{
         margin: calc(var(--w-margin) - 50px) 0;
+    }
+    .container .title h1{
+        font-size: 1.3em;
     }
 }
 

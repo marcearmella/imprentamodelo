@@ -63,26 +63,35 @@
   font-weight: bold;
 }
 
-@media screen and (max-width: 1150px){
+@media screen and (max-width: 1278px){
+  .title{
+    font-size: 1.2em;
+  }
+  .contacts li{
+    font-size: 0.9em;
+  }
+  .contacts li .icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+}
 
+@media screen and (max-width: 1150px){
   .container{
     width: 280px;
   }
-
   .title{
     width: 150px;
   }
-
   .contacts li{
     max-width: 250px;
     margin-bottom: 16px;
     font-size: .8em;
   }
-
   .contacts li:last-child{
     margin-bottom: 0;
   }
-
   .contacts li p{
     width: 80%;
   }
