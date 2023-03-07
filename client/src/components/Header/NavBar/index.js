@@ -7,25 +7,26 @@ const NavBar = () => {
   const [menu, setMenu] = useState('inactive');
   const [navSize, setnavSize] = useState("10rem");
   const [navColor, setnavColor] = useState("transparent");
+  const [top, setTop] = useState("70px");
   const screenSize = useRef(window.innerWidth);
   const listenScrollEvent = () => {
     window.scrollY > 10 ? setnavColor("#003362dd") : setnavColor("transparent");
-    
+    window.scrollY > 10 ? setTop("48px") : setTop("70px");
     if (screenSize.current > 1278) {
       window.scrollY > 10 ? setnavSize("6rem") : setnavSize("10rem");
     }else{
       window.scrollY > 10 ? setnavSize("3rem") : setnavSize("5rem");
     }
-
   };
+  const takeSize = () => screenSize.current = window.innerWidth;
+
   useEffect(() => {
     //responsiveMenu();
-    window.addEventListener('resize', () => {
-      screenSize.current = window.innerWidth;
-    });
+    window.addEventListener('resize', takeSize);
     window.addEventListener("scroll", listenScrollEvent);
     return () => {
       window.removeEventListener("scroll", listenScrollEvent);
+      window.removeEventListener('resize', takeSize);
     };
   }, []);
 
@@ -53,7 +54,7 @@ const NavBar = () => {
       <div className={`${styles.burger} ${menu === 'active' ? styles.active : styles.inactive}`} onClick={() => handlerMenu()}>
         <span className={styles.bar}></span>
       </div>
-      <div className={`${styles.links} ${menu==='active' ? styles.openMenu : styles.closeMenu}`}>
+      <div style={{top: top, transition: "all 1s"}} className={`${styles.links} ${menu==='active' ? styles.openMenu : styles.closeMenu}`}>
         <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/" end><p onClick={() => setMenu('inactive')}>Inicio</p></NavLink>
         <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/services"><p onClick={() => setMenu('inactive')}>Servicios</p></NavLink>
         <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/contact"><p onClick={() => setMenu('inactive')}>Contacto</p></NavLink>

@@ -152,11 +152,12 @@
   .links{
     display: flex;
     position: fixed;
-    top: 80px;
+    /* top: 70px; */
     background: var(--azul_t);
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
+    max-width: 440px;
     min-height: 350px;
     padding: 40px 0;
     border-top: 1px solid var(--azul_f);
@@ -200,14 +201,32 @@
   .logo{
     margin-left: 8px;
   }
-  
-  .logo h3{
-    font-size: 1.5em;
+}
+
+@media screen and (max-width: 440px){
+  .burger{
+    width: 25px;
+    height: 25px;
+  }
+  .bar{
+    height: 3px;
+  }
+  .bar::before,.bar::after{
+    height: 3px;
+  }
+  .bar::before{
+    transform: translateY(-8px);
+  }
+  .bar::after{
+    transform: translateY(8px);
+  }
+  .logo h1{
+    font-size: 0.8em;
     text-align: center;
   }
   
-  .logo h4{
-    font-size: 3.8em;
-    line-height: 40px;
+  .logo h2{
+    font-size: 0.8em;
+    line-height: 20px;
   }
 }

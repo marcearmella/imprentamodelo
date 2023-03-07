@@ -125,3 +125,14 @@
     width: 80%;
   }
 }
+
+@media screen and (max-width: 440px){
+  .contacts li .icon{
+    width: 25px;
+    height: 25px;
+  }
+  .contacts li p{
+    font-size: 0.8em;
+    width: 100%;
+  }
+}

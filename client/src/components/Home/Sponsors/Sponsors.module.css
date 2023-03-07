@@ -104,3 +104,10 @@
         width: 20vw;
     }
 }
+
+@media screen and (max-width: 440px){
+
+    .container .title{
+        margin: 10px 0;
+    }
+}

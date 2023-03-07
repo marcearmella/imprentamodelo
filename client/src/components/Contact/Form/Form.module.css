@@ -1,5 +1,6 @@
 .container {
   width: 500px;
+  height: 384px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -15,7 +16,7 @@
 }
 
 .data li {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   width: 100%;
 }
 
@@ -25,6 +26,7 @@
   background: linear-gradient(to bottom, rgba(225,225,225,0) 0%, var(--azul-claro) 100%);
   border: none;
   border-bottom: 1px solid var(--azul-claro2);
+  font-size: 1em;
 }
 
 .data li input::placeholder,
@@ -40,6 +42,7 @@ textarea::placeholder {
   height: 150px;
   padding: 4px 6px;
   resize: none;
+  font-size: 1em;
 }
 
 .flatButton {

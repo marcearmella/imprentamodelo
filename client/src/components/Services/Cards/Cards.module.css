@@ -113,3 +113,9 @@
     margin-right: 6px;
   }
 }
+
+@media screen and (max-width: 440px){
+  .container .single .text{
+    font-size: 0.7em;
+  }
+}
