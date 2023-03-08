@@ -130,6 +130,7 @@
     .features .feature{
         width: 120px;
         height: auto;
+        margin-bottom: 14px;
     }
     .features .feature img{
         width: 100px;
@@ -151,7 +152,6 @@
 
 @media screen and (max-width: 380px){
     .features .feature img{
-        width: 100%;
         height: auto;
         border-radius: 10px;
     }

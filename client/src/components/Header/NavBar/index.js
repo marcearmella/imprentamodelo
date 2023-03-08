@@ -5,7 +5,7 @@ import {NavLink, Link} from "react-router-dom";
 
 const NavBar = () => {
   const [menu, setMenu] = useState('inactive');
-  const [navSize, setnavSize] = useState("10rem");
+  const [navSize, setnavSize] = useState(window.innerWidth > 1278 ? "10rem" : "5rem");
   const [navColor, setnavColor] = useState("transparent");
   const [top, setTop] = useState("70px");
   const screenSize = useRef(window.innerWidth);
