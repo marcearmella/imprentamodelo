@@ -57,7 +57,7 @@
 }
 
 .container .boxes .infoContainer img{
-    width: 45%;
+    width: 85%;
     margin-top: 1rem;
 }
 
@@ -81,7 +81,7 @@
         font-size: 1.1em;
     }
     .container .boxes .infoContainer img{
-        width: 35%;
+        width: 85%;
         margin-top: 1rem;
     }
 }
@@ -91,7 +91,7 @@
         font-size: 1.1em;
     }
     .container .boxes .infoContainer img{
-        width: 35%;
+
         margin-top: 1rem;
     }
 }
@@ -101,7 +101,7 @@
         font-size: 1.1em;
     }
     .container .boxes .infoContainer img{
-        width: 32%;
+        width: 60%;
         margin-top: 1rem;
     }
 }
@@ -149,8 +149,9 @@
         font-size: .8em;
     }
     .container .boxes .infoContainer img{
-        width: 30%;
+        width: 60%;
         margin: 0.3rem 0;
+        
     }
     .videoContainer{
         width: 100%;
@@ -175,7 +176,7 @@
     }
     
     .container .boxes .infoContainer img{
-        width: 40%;
+        width: 60%;
         margin-bottom: 0.8rem;
     }
 }
