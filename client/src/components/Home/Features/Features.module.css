@@ -86,13 +86,16 @@
         height: 280px;
     }
     .features .feature img{
-        width: 180px;
-        height: 180px;
+        width: 150px;
+        height: 150px;
         border-radius: 15px;
     }
     .features .feature .text h2{
-        font-size: 1.2em;
+        font-size: 1.3em;
         text-align: center;
+    }
+    .features .feature .text p{
+        font-size: 1.1em;
     }
 }
 
@@ -133,19 +136,19 @@
         margin-bottom: 14px;
     }
     .features .feature img{
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         border-radius: 15px;
     }
     .container .title{
         margin: 20px 0;
     }
     .features .feature .text h2{
-        font-size: 0.8em;
+        font-size: 0.9em;
         text-align: center;
     }
     .features .feature .text p{
-        font-size: 0.7em;
+        font-size: 0.8em;
         text-align: center;
     }
 }

@@ -157,7 +157,7 @@
         width: 100%;
     }
     .infoContainer .text p{
-        font-size: 1em;
+        font-size: 1.1em;
     }
 }
 
@@ -172,7 +172,8 @@
     }
     
     .infoContainer .text p{
-        font-size: 1em;
+        font-size: 1.1em;
+        margin: 0 15px;
     }
     
     .container .boxes .infoContainer img{

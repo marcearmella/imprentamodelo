@@ -9,9 +9,11 @@ const NavBar = () => {
   const [navColor, setnavColor] = useState("transparent");
   const [top, setTop] = useState("70px");
   const screenSize = useRef(window.innerWidth);
+  const logoRef = useRef(null);
   const listenScrollEvent = () => {
     window.scrollY > 10 ? setnavColor("#003362dd") : setnavColor("transparent");
     window.scrollY > 10 ? setTop("48px") : setTop("70px");
+    window.scrollY > 10 ? logoRef.current.style.display = `flex` : logoRef.current.style.display = `none`;
     if (screenSize.current > 1278) {
       window.scrollY > 10 ? setnavSize("6rem") : setnavSize("10rem");
     }else{
@@ -45,7 +47,7 @@ const NavBar = () => {
       transition: "all 1s"
     }}>
       <Link style={{textDecoration: 'none', color: '#fff'}} to="/">
-        <div className={styles.logo} onClick={() => setMenu('inactive')}>
+        <div ref={ logoRef } className={styles.logo} onClick={() => setMenu('inactive')}>
           <h2>ARTES GRÁFICAS</h2>
           <h1>MODELO</h1>
           {/* <img style={{width: '100px'}} src={logo} alt="descripcion de la imagen" /> */}

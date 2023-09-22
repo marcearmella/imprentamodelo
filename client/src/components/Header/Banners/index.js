@@ -2,9 +2,10 @@ import React, {useEffect, useRef} from "react";
 import s from "./Banners.module.css";
 // import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 // import {faChevronRight, faChevronLeft} from "@fortawesome/free-solid-svg-icons";
-import banner3 from "../../../images/banners/foto1.png";
-import banner2 from "../../../images/banners/foto2.png";
-import banner1 from "../../../images/banners/banner_imprenta.png";
+import banner4 from "../../../images/banners/banner4.png";
+import banner3 from "../../../images/banners/banner3.png";
+import banner2 from "../../../images/banners/banner2.png";
+import banner1 from "../../../images/banners/banner1.png";
 
 const Banners = () => {
 
@@ -68,6 +69,9 @@ const Banners = () => {
         </div>
         <div className={s.slide}>
           <img src={banner3} alt="banner de la imprenta"/>
+        </div>
+        <div className={s.slide}>
+          <img src={banner4} alt="banner de la imprenta"/>
         </div>
       </div>
       {/* <div className={s.arrows}>
