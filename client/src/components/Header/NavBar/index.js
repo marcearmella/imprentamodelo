@@ -1,21 +1,34 @@
 import styles from "./NavBar.module.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {NavLink, Link} from "react-router-dom";
 // import logo from '../../../images/logos/logo-blanco.png';
 
 const NavBar = () => {
   const [menu, setMenu] = useState('inactive');
-  const [navSize, setnavSize] = useState("10rem");
+  const [navSize, setnavSize] = useState(window.innerWidth > 1278 ? "10rem" : "5rem");
   const [navColor, setnavColor] = useState("transparent");
+  const [top, setTop] = useState("70px");
+  const screenSize = useRef(window.innerWidth);
+  const logoRef = useRef(null);
   const listenScrollEvent = () => {
     window.scrollY > 10 ? setnavColor("#003362dd") : setnavColor("transparent");
-    window.scrollY > 10 ? setnavSize("6rem") : setnavSize("10rem");
+    window.scrollY > 10 ? setTop("48px") : setTop("70px");
+    window.scrollY > 10 ? logoRef.current.style.display = `flex` : logoRef.current.style.display = `none`;
+    if (screenSize.current > 1278) {
+      window.scrollY > 10 ? setnavSize("6rem") : setnavSize("10rem");
+    }else{
+      window.scrollY > 10 ? setnavSize("3rem") : setnavSize("5rem");
+    }
   };
+  const takeSize = () => screenSize.current = window.innerWidth;
+
   useEffect(() => {
     //responsiveMenu();
+    window.addEventListener('resize', takeSize);
     window.addEventListener("scroll", listenScrollEvent);
     return () => {
       window.removeEventListener("scroll", listenScrollEvent);
+      window.removeEventListener('resize', takeSize);
     };
   }, []);
 
@@ -34,7 +47,7 @@ const NavBar = () => {
       transition: "all 1s"
     }}>
       <Link style={{textDecoration: 'none', color: '#fff'}} to="/">
-        <div className={styles.logo} onClick={() => setMenu('inactive')}>
+        <div ref={ logoRef } className={styles.logo} onClick={() => setMenu('inactive')}>
           <h2>ARTES GRÁFICAS</h2>
           <h1>MODELO</h1>
           {/* <img style={{width: '100px'}} src={logo} alt="descripcion de la imagen" /> */}
@@ -43,7 +56,7 @@ const NavBar = () => {
       <div className={`${styles.burger} ${menu === 'active' ? styles.active : styles.inactive}`} onClick={() => handlerMenu()}>
         <span className={styles.bar}></span>
       </div>
-      <div className={`${styles.links} ${menu==='active' ? styles.openMenu : styles.closeMenu}`}>
+      <div style={{top: top, transition: "all 1s"}} className={`${styles.links} ${menu==='active' ? styles.openMenu : styles.closeMenu}`}>
         <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/" end><p onClick={() => setMenu('inactive')}>Inicio</p></NavLink>
         <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/services"><p onClick={() => setMenu('inactive')}>Servicios</p></NavLink>
         <NavLink className={e => !e.isActive ? styles.navLink : styles.navLinkActive} to="/contact"><p onClick={() => setMenu('inactive')}>Contacto</p></NavLink>

@@ -13,8 +13,9 @@
 }
 
 .container .title h1{
-    font-size: 2em;
+    font-size: 1.8em;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .boxes{
@@ -56,7 +57,7 @@
 }
 
 .container .boxes .infoContainer img{
-    width: 45%;
+    width: 85%;
     margin-top: 1rem;
 }
 
@@ -70,11 +71,17 @@
 }
 
 @media screen and (max-width: 1278px){
+    .container .title{
+        margin: calc(var(--w-margin) - 50px) 0;
+    }
+    .container .title h1{
+        font-size: 1.3em;
+    }
     .infoContainer .text p{
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
     .container .boxes .infoContainer img{
-        width: 35%;
+        width: 85%;
         margin-top: 1rem;
     }
 }
@@ -84,7 +91,7 @@
         font-size: 1.1em;
     }
     .container .boxes .infoContainer img{
-        width: 35%;
+
         margin-top: 1rem;
     }
 }
@@ -94,7 +101,7 @@
         font-size: 1.1em;
     }
     .container .boxes .infoContainer img{
-        width: 32%;
+        width: 60%;
         margin-top: 1rem;
     }
 }
@@ -142,11 +149,15 @@
         font-size: .8em;
     }
     .container .boxes .infoContainer img{
-        width: 40%;
-        margin-top: 1.2rem;
+        width: 60%;
+        margin: 0.3rem 0;
+        
     }
     .videoContainer{
         width: 100%;
+    }
+    .infoContainer .text p{
+        font-size: 1.1em;
     }
 }
 
@@ -155,20 +166,24 @@
         width: 100%;
         padding: 0 8px;
     }
+    .container .title{
+        margin: 20px 0;
+        margin-top: 50px;
+    }
     
     .infoContainer .text p{
-        font-size: 1em;
+        font-size: 1.1em;
+        margin: 0 15px;
     }
     
     .container .boxes .infoContainer img{
-        width: 40%;
+        width: 60%;
+        margin-bottom: 0.8rem;
     }
 }
 
 @media screen and (max-width: 320px){
-    .container .title{
-        margin: 6px 0;
-    }
+    
     .infoContainer .text p{
         text-align: justify;
     }

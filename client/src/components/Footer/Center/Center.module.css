@@ -14,7 +14,7 @@
     justify-content: center;
     width: auto;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     border-bottom: 2px solid #fff;
 }
 
@@ -46,6 +46,21 @@
 
 .link:hover{
     color: var(--naranja);
+}
+
+@media screen and (max-width: 1278px){
+    .title{
+        font-size: 1.2em;
+        margin-bottom: 40px;
+    }
+    .link{
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+    .linkActive{
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
 }
 
 @media screen and (max-width: 1150px){

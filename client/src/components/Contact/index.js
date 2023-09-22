@@ -13,11 +13,15 @@ const Contact = ({setFlag}) => {
   return (
     <div className={styles.container} ref={contactRef}>
       <div className={styles.data}>
-        <h2>Datos de contacto</h2>
+        <div className={styles.title}>
+          <h1>Datos de contacto</h1>
+        </div>
         <Data />
       </div>
       <div className={styles.form}>
-        <h2>Envianos tu consulta</h2>
+        <div className={styles.title}>
+          <h1>Envianos tu consulta</h1>
+        </div>
         <Form />
       </div>
     </div>

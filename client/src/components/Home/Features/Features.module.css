@@ -13,8 +13,9 @@
 }
 
 .container .title h1{
-    font-size: 2em;
+    font-size: 1.8em;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .features{
@@ -61,6 +62,15 @@
     font-weight: 600;
 }
 
+@media screen and (max-width: 1278px){
+    .container .title{
+        margin: calc(var(--w-margin) - 50px) 0;
+    }
+    .container .title h1{
+        font-size: 1.3em;
+    }
+}
+
 @media screen and (max-width: 1023px) {
     .container .title{
         margin: calc(var(--w-margin) - 40px) 0;
@@ -76,13 +86,16 @@
         height: 280px;
     }
     .features .feature img{
-        width: 180px;
-        height: 180px;
+        width: 150px;
+        height: 150px;
         border-radius: 15px;
     }
     .features .feature .text h2{
-        font-size: 1.2em;
+        font-size: 1.3em;
         text-align: center;
+    }
+    .features .feature .text p{
+        font-size: 1.1em;
     }
 }
 
@@ -115,21 +128,35 @@
     }
 }
 
-@media screen and (max-width: 380px){
+@media screen and (max-width: 440px){
+
+    .features .feature{
+        width: 120px;
+        height: auto;
+        margin-bottom: 14px;
+    }
+    .features .feature img{
+        width: 90px;
+        height: 90px;
+        border-radius: 15px;
+    }
     .container .title{
         margin: 20px 0;
     }
-    .features .feature{
-        width: 45%;
-        height: 240px;
+    .features .feature .text h2{
+        font-size: 0.9em;
+        text-align: center;
     }
+    .features .feature .text p{
+        font-size: 0.8em;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 380px){
     .features .feature img{
-        width: 100%;
         height: auto;
         border-radius: 10px;
     }
-    .features .feature .text h2{
-        font-size: 1em;
-        text-align: center;
-    }
+    
 }

@@ -1,6 +1,6 @@
 import styles from './About.module.css';
 import video from '../../../videos/video imprenta.mp4';
-import logo from '../../../images/logos/logo.png';
+import logo from '../../../images/logos/agm_logo_txtNegro.png';
 import { useEffect, useRef } from 'react';
 
 const About = () => {

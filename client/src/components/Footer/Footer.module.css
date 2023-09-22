@@ -12,6 +12,14 @@
   margin-top: var(--w-margin);
 }
 
+@media screen and (max-width: 1278px){
+  .container{
+    margin-top: calc(var(--w-margin) - 50px);
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+}
+
 @media screen and (max-width: 1150px){
   .container{
     height: auto;
@@ -28,5 +36,11 @@
   .container{
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 440px){
+  .container{
+    padding: 0 10px;
   }
 }
